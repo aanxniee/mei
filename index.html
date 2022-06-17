@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>美</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+        <link rel="icon" type="image/x-icon" href="assets/favi.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">"
+        
+        <style>
+            body,h1, h2, h3, h4, h5, p, a, form, textarea {font-family: poppins; font-weight: 300}
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <p class="center-align top">
+            <a class="logo"><img src="assets/logo.svg" width="160" height="160"></a>
+            <br> 
+            <a class="text" href="recommendations.html">✽ ingredient recommendations ✽</a>
+        </p>
+        <div>
+            <div class="body-padding center-align">
+                <img src="assets/search.svg" width="225" height="225">
+                <h1 class="bold">search ingredients</h1>
+                <p>to better understand exactly what you’re putting on your body, check your cosmetics for potentially harming ingredients</p>
+                <br>
+                <div id="input-div">
+                    <form>
+                        <textarea placeholder="copy and paste the ingredients list of your product here, separated by commas" id="input" name="ingredients list" class="input"></textarea>
+                        <div class="btn-padding">
+                            <button id="submitInput" class="button" type="button">search</button>
+                        </div>
+                    </form>
+                    <br>
+                </div>
+
+                
+            </div>
+            <div id="outputted" class="output-padding"></div>
+        </div>
+        
+        <script type="text/javascript" src="database.js"></script>
+        <script>
+            myMap = new Map();
+            data.forEach(addToMap); // for every element in an array, we call the addToMap function
+
+            // objects in the database
+            function addToMap(value, index, array) {
+                var item = new Object;
+                item.title = value.name;
+                item.link = value.link;
+                item.desc = value.desc;
+                
+                // set(key, value)
+                // ie. 'alcohol' will map to the alcohol object
+                myMap.set(value.name.toLowerCase(), item);
+            }
+            
+            // code will run after user clicks the button
+            $('#submitInput').click(function() {
+                // outterHtml will replace an element and its contents --> loads a new section of the page
+                // in this case, it replaces the div with id "outputted" --> empties it
+                document.getElementById("outputted").outterHTML = ""
+                
+                // take and parse user input
+                var userInput = document.getElementById("input").value;
+                const inputs = userInput.split(",");
+                
+                var output = "";
+                
+                if (userInput == "") {
+                    output += '<div class="output-box center-align"><p>no ingredients entered</p></div>';
+                }
+
+                for (var key of inputs) {
+                    // get(key) will return the object with the specified key
+                    // access the object associated with each input
+                    var val = myMap.get(key.trim().toLowerCase());
+                    if (val != null) {
+                        output += '<div class="output-box"><h1>' + val.title + ' <a target="_blank" href="' + val.link + '">🛈</a></h1></a><p>' + val.desc + '</p></div>';
+                    }
+                }
+
+                if (output == "") { 
+                    output += '<div class="empty-box"><h1>clean (≧◡≦)</h1><h2>your product contains mostly clean ingredients</h2><p>reminder that everyone will have different reactions to certain ingredients. some people have highly sensitive and may still experience breakouts and irritation caused by this product. be careful and stop using a product <br>immediately if you feel any discomfort</p></div>';
+                }
+                
+                // innerHtml will replace the contents inside the element
+                document.getElementById("outputted").innerHTML = output;
+            });
+        </script>
+    </body>
+</html>

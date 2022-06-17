@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>美</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+        <link rel="icon" type="image/x-icon" href="assets/favi.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">"
+        
+        <style>
+            body,h1, h2, h3, h4, h5, p, a, form, textarea {font-family: poppins; font-weight: 300}
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p class="center-align top">
+            <a class="logo"><img src="assets/logo.svg" width="160" height="160"></a>
+            <br>
+            <a class="text" href="index.html">✽ search ingredients ✽</a>
+        </p>
+        <div>
+            <div class="body-padding center-align">
+                <img src="assets/rec.svg" width="225" height="225">
+                <h1 class="bold">ingredient recommendations</h1>
+                <p>here are a few ingredients that you can incoporate into your daily routine for clear, glowing skin <br> note: everyone has different reactions to certain products. what works for others may not work for you</p>
+            </div>
+        </div>
+
+        
+        <div id="info" class="info-padding"></div>
+        
+        <script type="text/javascript" src="recommendations.js"></script>
+        <script>
+            myMap = new Map();
+            data.forEach(addToMap); 
+
+            function addToMap(value, index, array) {
+                var item = new Object;
+                item.title = value.name;
+                item.link = value.link;
+                item.desc = value.desc;
+                item.rec = value.rec;
+                item.reclink = value.reclink;
+
+                myMap.set(value.name.toLowerCase(), item);
+            }
+
+            // code will run during page load up
+            $(document).ready(function() {
+                document.getElementById("info").innerHTML = "";
+                const items = ["cica", "ceramide", "glycolic acid", "green tea", "hyaluronic acid", "niacinamide", "rice", "salicylic acid", "snail mucin", "sunscreen", "vitamin c"];
+
+                var output = "";
+                for (var key of items) {
+                    var val = myMap.get(key.trim().toLowerCase());
+                    if (val != null) {
+                        output += '<div class="info-box"><h1>' + val.title + ' <a target="_blank" href="' + val.link + '">🛈</a></h1></a><p>' + val.desc + '</p><p>personal favourite: <a class="text" target="_blank" href="' + val.reclink + '">' + val.rec + '</a></div>';
+                    }
+                }
+                document.getElementById("info").innerHTML = output;
+            });
+        </script>
+    </body>
+</html>

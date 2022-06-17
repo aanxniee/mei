@@ -1,0 +1,264 @@
+:root {
+    --heading-color: #433831;
+    --text-color: #594C43;
+  
+    --main-color: #F1CFC2;
+    --second-color: #F1CFC2;
+    --third-color: #93CBBE;
+  
+    --bg-color: #F7F4EF;
+    --btn-color: #594C43;
+    --outline-color: var(--heading-color);
+
+    --border-radius: 6px;
+    --border-width: 2.35px;
+}
+
+html {
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+}
+
+body {
+    margin: 0;
+}
+
+a.text {
+    font-size: inherit;
+    text-decoration: none;
+    color: var(--btn-color);
+    transition: 150ms all;
+}
+
+a.text:hover {
+    opacity: 0.85;
+}
+
+.top {
+    padding-top: 1px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.body-padding {
+    padding: 2em 0em 1em;
+    max-width: 60rem;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    margin: 0.5em;
+    line-height: 1.1em;
+}
+
+p {
+    color: var(--text-color);
+    margin: 1em;
+    line-height: 1em;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.center-align {
+    text-align: center;
+}
+
+::-moz-selection { 
+    color: var(--main-color);
+    background: var(--btn-color);
+}
+
+::selection {
+    color: var(--main-color);
+    background: var(--btn-color);
+}
+
+.no-select {
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.logo {
+    padding-bottom: 10px;
+    padding-top: 5px;   
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.button {
+    background-color: var(--btn-color);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--bg-color);
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--outline-color);
+    transition: 150ms all;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.btn-padding {
+    padding-top: 15px;
+}
+
+#input-div {
+    padding: 6px 0px 6px;
+}
+
+.input {
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--heading-color);
+    border-radius: var(--border-radius);
+    padding: 10px 10px;
+    border: var(--border-width) solid var(--outline-color);
+}
+
+::placeholder {
+    color: var(--btn-color);
+    opacity: 0.8;
+    line-height: 1.2em;
+}
+
+::-webkit-input-placeholder { 
+    color: var(--btn-color);
+    opacity: 0.7;
+    line-height: 1.2em;
+}
+  
+:-ms-input-placeholder {
+    color: var(--btn-color);
+    opacity: 0.7;
+    line-height: 1.2em;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 90%;
+    height: 9em;
+    transition: 150ms all;
+}
+
+textarea:focus {
+    border-color: var(--text-color);
+    outline: none;
+}
+
+.output-box {
+    border: var(--border-width) solid var(--outline-color);
+    border-radius: var(--border-radius);
+    background-color: var(--main-color);
+    padding: 15px;
+    margin: 1.8em;
+}
+
+.output-padding {
+    padding: 0em 0em 5em;
+    max-width: 57.7rem;
+    margin: auto;
+}
+
+.output-box h1 {
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.output-box a {
+    font-size: 0.7em;
+    text-decoration: none;
+    color: var(--bg-color);
+    transition: 150ms all;
+}
+
+.output-box a:hover {
+    opacity: 0.85;
+}
+
+.empty-box {
+    border: var(--border-width) solid var(--outline-color);
+    border-radius: var(--border-radius);
+    background-color: var(--main-color);
+    padding: 15px;
+    margin: 1.8em; 
+    text-align: center;
+}
+
+.empty-box h1 {
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 1.3em;
+}
+
+.empty-box h2 {
+    font-size: 1.2em;
+}
+
+.empty-box p {
+    font-size: 0.9em;
+}
+
+
+.info-box {
+    border-radius: var(--border-radius);
+    background-color: var(--third-color);
+    border: var(--border-width) solid var(--outline-color);
+    padding: 15px;
+    margin: 1.8em;
+}
+
+.info-padding {
+    max-width: 57.7rem;
+    margin: auto;
+}
+
+.info-box h1 {
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.info-box a {
+    font-size: 0.7em;
+    text-decoration: none;
+    color: var(--bg-color);
+    transition: 150ms all;
+}
+
+.info-box a:hover {
+    opacity: 0.85;
+}
+
+.info-box a.text {
+    font-size: inherit;
+    text-decoration: none;
+    color: var(--bg-color);
+    transition: 150ms all;
+}
+
+.info-box a.text:hover {
+    opacity: 0.8;
+}
+
+.imgs {
+    width: 60px; 
+    padding-left: 0.8em; 
+    padding-top: 1.2em !important;
+}
+  
