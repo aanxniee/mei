@@ -8,4 +8,6 @@ Coded with HTML, CSS, and JavaScript with a jQuery). All information for harmful
 
 Try it out [here](https://www.bit.ly/mei_anniecai)!
 
-![image](https://user-images.githubusercontent.com/63011927/174400207-4e6a4c60-5b65-4c81-8869-5f1dbdd914e1.png)
+![image](https://user-images.githubusercontent.com/63011927/174620767-f55eea67-e5e7-42e4-9ed0-d27b7c062189.png)
+![image](https://user-images.githubusercontent.com/63011927/174621098-2db4bada-586f-48ab-bcb1-d1f6962b91b4.png)
+![image](https://user-images.githubusercontent.com/63011927/174621586-7bea9c02-17a1-4fb2-a76d-b960f60fd26a.png)
