@@ -6,6 +6,6 @@ Alongside the search engine, there is also separate page with a list of benefici
 
 Coded with HTML, CSS, and JavaScript with a jQuery). All information for harmful/beneficial ingredients are stored in JSON databases. There are over 250+ different ingredients.
 
-Try it out [here](bit.ly/mei_anniecai)!
+Try it out [here](https://www.bit.ly/mei_anniecai)!
 
 ![image](https://user-images.githubusercontent.com/63011927/174400207-4e6a4c60-5b65-4c81-8869-5f1dbdd914e1.png)
