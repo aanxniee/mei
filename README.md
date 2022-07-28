@@ -1,4 +1,4 @@
-# 🌸 mei
+# 🌸 Mei
 
 美  is a webapp where you can check for potentially harming ingredients in your cosmetics products. Simply copy and paste the product's ingredients list (comma separated) into the search box and 美  will return a list of ingredients present that may cause irritation or acne. Each ingredient has a short and simple description and a Wikipedia link for full details.
 
