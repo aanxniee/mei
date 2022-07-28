@@ -4,7 +4,7 @@
 
 Alongside the search engine, there is also separate page with a list of beneficial ingredients to help users identify what may help their skin. Each ingredient has a short description, a link for full details, and a link to my personal favourite product. 
 
-Coded with HTML, CSS, and JavaScript with a jQuery). All information for harmful/beneficial ingredients are stored in JSON databases. There are over 250+ different ingredients.
+Coded with HTML, CSS, and JavaScript with a jQuery. All information for harmful/beneficial ingredients are stored in JSON databases. There are over 250+ different ingredients.
 
 Try it out [here](https://www.bit.ly/mei_anniecai)!
 
